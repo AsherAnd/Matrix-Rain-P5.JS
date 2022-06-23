@@ -55,7 +55,7 @@ class katakana {
   constructor(x) {
     // properties of the object
     this.x = x;
-    this.y = random(-1200, -1000);
+    this.y = random(-900, -800);
     this.fallSpeed = random(0.003 * height, 0.01 * height);
     this.value;
     this.textSize = 14;
