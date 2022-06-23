@@ -13,7 +13,7 @@ var character = [];
 
 // when screen size changes
 function windowResized() {
-  resizeCanvas(windowWidth, windowHeight * 0.9);
+  resizeCanvas(windowWidth, windowHeight);
 
   // reset values
   clear();
@@ -66,7 +66,7 @@ class katakana {
   rain() {
     // The unicode of katakana characters
     for (let j = 0; j < this.stream.length; j++) {
-      if (frameCount % round(random(2, 30)) == 0) {
+      if (frameCount % round(random(2, 20)) == 0) {
         this.value = String.fromCharCode(0x30a0 + round(random(0, 96)));
         this.stream[j] = this.value;
       }
