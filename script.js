@@ -55,18 +55,31 @@ class katakana {
   constructor(x) {
     // properties of the object
     this.x = x;
+<<<<<<< HEAD
     this.y = random(-1200, -1000);
     this.fallSpeed = random(0.003 * height, 0.01 * height);
     this.value;
+=======
+    this.y = random(-1000, -800);
+    this.fallSpeed = random(0.003 * height, 0.01 * height);
+    this.value;
+    this.switchSpeed = round(random(2, 30));
+>>>>>>> 35ef405e99fdfff9b9d122128a73b764e44a544c
     this.textSize = 14;
     this.stream = new Array(round(random(5, 35)));
     this.color = "Green"; // Green or Red
   }
 
   rain() {
+<<<<<<< HEAD
     // The unicode of katakana characters
     for (let j = 0; j < this.stream.length; j++) {
       if (frameCount % round(random(2, 30)) == 0) {
+=======
+    // The uni-code of katakana characters
+    for (let j = 0; j < this.stream.length; j++) {
+      if (frameCount % this.switchSpeed == 0) {
+>>>>>>> 35ef405e99fdfff9b9d122128a73b764e44a544c
         this.value = String.fromCharCode(0x30a0 + round(random(0, 96)));
         this.stream[j] = this.value;
       }
@@ -94,6 +107,10 @@ class katakana {
       text(`${this.stream[j]}`, this.x, this.y - j * -this.textSize);
     }
     this.update();
+<<<<<<< HEAD
+=======
+    this.update();
+>>>>>>> 35ef405e99fdfff9b9d122128a73b764e44a544c
   }
 
   update() {
