@@ -102,7 +102,7 @@ class katakana {
 
     // When the character(s) falls past the screen
     if (this.y > height) {
-      this.y = -height / 2;
+      this.y = random(-900, -800);
     }
   }
 }
